@@ -6,7 +6,11 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "lint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx"
+    "lint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{vue,js,jsx,ts,tsx}": "eslint --fix"
   },
   "dependencies": {
     "vue": "^3.2.25"
@@ -21,6 +25,8 @@
     "eslint-plugin-import": "2.25.2",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.7.1",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.4.0",
     "prettier": "^2.6.2",
     "typescript": "^4.5.4",
     "vite": "^2.9.5",

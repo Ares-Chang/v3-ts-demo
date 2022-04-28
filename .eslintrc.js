@@ -39,7 +39,9 @@ module.exports = {
   rules: {
     // 'no-console': import.meta.env.PROD ? 'warn' : 'off',
     // 'no-debugger': import.meta.env.PROD ? 'warn' : 'off',
+    // 关闭依赖项 生产/开发 树检查 (开启后 eslint 会判断并提示依赖应当处理 生产/开发)
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    // 关闭检查必须携带文件后缀名
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -50,5 +52,6 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'import/prefer-default-export': 'off', // 关闭 ESLint 默认导出喜好配置
   },
 }

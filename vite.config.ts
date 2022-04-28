@@ -12,6 +12,7 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, 'src'), // 设置 `@` 指向 `src` 目录
     },
+    extensions: ['.js', '.jsx', '.ts', '.tsx'], // 使用路径别名时想要省略的后缀名，可以自己 增减
   },
   base: './', // 设置打包路径
   server: {

@@ -30,4 +30,9 @@ export default defineConfig({
     //   }
     // }
   },
+  esbuild: {
+    pure: ['console.log'], // 生产环境自动移除 console.log
+    drop: ['debugger'], // 生产环境自动移除 debugger
+    minify: true,
+  },
 })

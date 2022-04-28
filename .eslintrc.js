@@ -37,8 +37,7 @@ module.exports = {
     },
   },
   rules: {
-    // 'no-console': import.meta.env.PROD ? 'warn' : 'off',
-    // 'no-debugger': import.meta.env.PROD ? 'warn' : 'off',
+    'no-console': ['error', { allow: ['warn', 'error'] }], // 禁用 console，但可以使用 warn/error
     // 关闭依赖项 生产/开发 树检查 (开启后 eslint 会判断并提示依赖应当处理 生产/开发)
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     // 关闭检查必须携带文件后缀名

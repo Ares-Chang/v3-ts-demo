@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useMouse } from '@vueuse/core'
 import { useUserStore } from '@/store/user'
 import { LOGININ } from '@/api/module/login'
 
@@ -11,6 +12,8 @@ const handleClick = () => {
 const handleLogin = () => {
   LOGININ()
 }
+
+const { x, y } = useMouse()
 </script>
 
 <template>
@@ -19,6 +22,7 @@ const handleLogin = () => {
   <br />
   <button @click="handleClick">点击更改用户</button>
   <button @click="handleLogin">点击登录</button>
+  <h3>Mouse: {{ x }} x {{ y }}</h3>
 </template>
 
 <style scoped lang="scss">

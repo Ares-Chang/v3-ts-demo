@@ -26,9 +26,9 @@ export default defineConfig({
     //   '/api': {
     //     target: 'http://xxx.xxx.xxx.xxx:8000',
     //     changeOrigin: true,
-    //     rewrite: (path) => path.replace('/^\/api/', '/')
-    //   }
-    // }
+    //     rewrite: (path) => path.replace(/^\/api/, ''),
+    //   },
+    // },
   },
   esbuild: {
     pure: ['console.log'], // 生产环境自动移除 console.log

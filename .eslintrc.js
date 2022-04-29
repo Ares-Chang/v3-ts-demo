@@ -38,6 +38,11 @@ module.exports = {
   },
   rules: {
     'no-console': ['error', { allow: ['warn', 'error'] }], // 禁用 console，但可以使用 warn/error
+    // 关闭禁止重新分配函数参数
+    'no-param-reassign': [
+      'error',
+      { props: true, ignorePropertyModificationsForRegex: ['config'] },
+    ],
     // 关闭依赖项 生产/开发 树检查 (开启后 eslint 会判断并提示依赖应当处理 生产/开发)
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     // 关闭检查必须携带文件后缀名
@@ -52,5 +57,6 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off', // 关闭 ESLint 默认导出喜好配置
+    'import/no-cycle': 'off', // 关闭依赖循环检查
   },
 }

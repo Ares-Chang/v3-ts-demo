@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import { useUserStore } from '@/store/user'
+import { LOGININ } from '@/api/module/login'
 
 const userStore = useUserStore()
 
 const handleClick = () => {
   userStore.updateName('李四')
+}
+
+const handleLogin = () => {
+  LOGININ()
 }
 </script>
 
@@ -13,6 +18,7 @@ const handleClick = () => {
   <span>Store: {{ userStore.name }}</span>
   <br />
   <button @click="handleClick">点击更改用户</button>
+  <button @click="handleLogin">点击登录</button>
 </template>
 
 <style scoped lang="scss">

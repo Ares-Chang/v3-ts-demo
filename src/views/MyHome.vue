@@ -2,11 +2,9 @@
 import { useUserStore } from '@/store/user'
 
 const userStore = useUserStore()
-console.log(userStore.name)
 
 const handleClick = () => {
   userStore.updateName('李四')
-  console.log(userStore.name)
 }
 </script>
 
@@ -17,4 +15,8 @@ const handleClick = () => {
   <button @click="handleClick">点击更改用户</button>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+h1 {
+  color: pink;
+}
+</style>
